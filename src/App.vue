@@ -48,22 +48,22 @@ export default {
         </select>
       </div>
 
-      <div class="cards-container">
-        <div class="container py-2">
-          <div class="text-bg-dark p-2 fw-bold">
-            Found 39 card
-          </div>
-          <div class="row row-cols-4">
-            <div class="col card" v-for="card in cards">
-              <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">
-                  ciao
-                </h5>
-                <p class="card-text">
-
-                </p>
+      <div class="cards-container container py-2">
+        <div class="text-bg-dark p-3 fw-bold">
+          Found 39 card
+        </div>
+        <div class="row row-cols-4 g-5">
+          <div class="col" v-for="card in cards">
+            <div class="yugioh-bg">
+              <img :src="card.card_images[0].image_url" class="w-100 pb-3" alt="...">
+              <h5 class="text-center text-light pb-3">
+                titolo
+              </h5>
+              <div class="text-center pb-3 text-uppercase">
+                archetipo
               </div>
+
+
             </div>
           </div>
         </div>
