@@ -18,8 +18,8 @@ export default {
         .get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
         .then(response => {
           this.cards = response.data.data;
-          console.log(this.cards[0])
-          console.log(this.cards[0].card_images[0].image_url)
+          //console.log(this.cards[0])
+          //console.log(this.cards[0].name)
         })
   }
 }
@@ -52,17 +52,24 @@ export default {
         <div class="text-bg-dark p-3 fw-bold">
           Found 39 card
         </div>
+
         <div class="row row-cols-4 g-5">
           <div class="col" v-for="card in cards">
             <div class="yugioh-bg">
+
               <img :src="card.card_images[0].image_url" class="w-100 pb-3" alt="...">
+
               <h5 class="text-center text-light pb-3">
-                titolo
+                {{ card.name }}
               </h5>
-              <div class="text-center pb-3 text-uppercase">
-                archetipo
+
+              <div class="text-center pb-3 text-uppercase" v-if="card.archetype != null">
+                {{ card.archetype }}
               </div>
 
+              <div class="text-center pb-3" v-else>
+                <em>No archetype found</em>
+              </div>
 
             </div>
           </div>
