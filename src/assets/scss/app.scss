@@ -1,6 +1,15 @@
 @use "bootstrap/scss/bootstrap";
 
 
-h1 {
-    color: red;
+$yugioh-primary: #d48f38;
+$yugioh-light-primary: #ffffff;
+
+
+main {
+    background-color: $yugioh-primary;
+}
+
+.cards-container {
+    background-color: $yugioh-light-primary;
+    height: 500px;
 }
