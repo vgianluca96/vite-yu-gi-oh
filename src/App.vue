@@ -32,6 +32,7 @@ export default {
       <AppMainGrid />
 
     </div>
+
   </main>
 </template>
 
