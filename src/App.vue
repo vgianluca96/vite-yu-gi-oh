@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       archetypes: null,
-      card: null
+      cards: null
     }
   },
   created() {
@@ -19,6 +19,7 @@ export default {
         .then(response => {
           this.cards = response.data.data;
           console.log(this.cards[0])
+          console.log(this.cards[0].card_images[0].image_url)
         })
   }
 }
@@ -33,8 +34,8 @@ export default {
       </h1>
     </div>
   </header>
-  <main class="py-4">
 
+  <main class="yugioh-bg py-4">
 
     <div class="container">
 
@@ -48,7 +49,24 @@ export default {
       </div>
 
       <div class="cards-container">
-        ciao
+        <div class="container py-2">
+          <div class="text-bg-dark p-2 fw-bold">
+            Found 39 card
+          </div>
+          <div class="row row-cols-4">
+            <div class="col card" v-for="card in cards">
+              <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  ciao
+                </h5>
+                <p class="card-text">
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>

@@ -5,11 +5,10 @@ $yugioh-primary: #d48f38;
 $yugioh-light-primary: #ffffff;
 
 
-main {
+.yugioh-bg {
     background-color: $yugioh-primary;
 }
 
 .cards-container {
     background-color: $yugioh-light-primary;
-    height: 500px;
 }
