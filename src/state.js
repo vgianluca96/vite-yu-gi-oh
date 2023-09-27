@@ -3,6 +3,7 @@ import axios from 'axios'
 
 export const state = reactive({
     url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=200&offset=0',
+    urlTemp: '',
     archetypes: null,
     cards: null,
     getArchetypes() {
@@ -13,12 +14,13 @@ export const state = reactive({
             })
     },
     getCards() {
+        this.urlTemp = this.url;
         if (archetypeFilter.value != 'null') {
-            this.url += ['&archetype=' + archetypeFilter.value];
+            this.urlTemp += ['&archetype=' + archetypeFilter.value];
         }
-        console.log(this.url);
+        console.log(this.urlTemp);
         axios
-            .get(this.url)
+            .get(this.urlTemp)
             .then(response => {
                 this.cards = response.data.data;
             })
