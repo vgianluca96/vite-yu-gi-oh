@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         filter() {
-            console.log(formfilter.value);
+            console.log(archetypeFilter.value);
             this.state.getCard();
         }
     }
