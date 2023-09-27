@@ -1,13 +1,11 @@
 <script>
 
-import AppMainFilter from './components/AppMainFilter.vue'
-import AppMainGrid from './components/AppMainGrid.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
 
   components: {
-    AppMainFilter,
-    AppMainGrid
+    AppMain
   }
 
 }
@@ -23,17 +21,7 @@ export default {
     </div>
   </header>
 
-  <main class="yugioh-bg py-4">
-
-    <div class="container">
-
-      <AppMainFilter />
-
-      <AppMainGrid />
-
-    </div>
-
-  </main>
+  <AppMain />
 </template>
 
 <style lang="scss"></style>
