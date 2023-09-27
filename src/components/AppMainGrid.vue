@@ -15,8 +15,8 @@ export default {
 <template>
     <div class="cards-container p-4">
 
-        <div class="text-bg-dark p-3 fw-bold">
-            Found 39 card
+        <div class="text-bg-dark p-3 fw-bold" v-if="cards != null">
+            Found {{ cards.length }} results
         </div>
 
         <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-5" v-if="cards != null">
