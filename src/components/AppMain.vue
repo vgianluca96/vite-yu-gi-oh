@@ -19,7 +19,12 @@ export default {
         this.state.getArch();
         this.state.getCard();
     },
-
+    methods: {
+        filter() {
+            console.log(formfilter.value);
+            this.state.getCard();
+        }
+    }
 }
 
 </script>
@@ -29,7 +34,7 @@ export default {
 
         <div class="container">
 
-            <AppMainFilter :archetypes="this.state.archetypes" />
+            <AppMainFilter :archetypes="this.state.archetypes" @filter="filter" />
 
             <AppMainGrid :cards="this.state.cards" />
 

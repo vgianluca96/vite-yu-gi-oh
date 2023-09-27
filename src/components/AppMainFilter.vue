@@ -2,15 +2,18 @@
 
 export default {
     name: 'AppMainFilter',
-    props: ['archetypes']
+    props: ['archetypes'],
 }
+
 </script>
 
 <template>
     <div class="col-3 pb-3">
-        <select class="form-select" aria-label="select example">
-            <option selected>Filter by Card Archetype</option>
-            <option v-for="archetype in archetypes" :value="archetype.archetype_name">
+        <select class="form-select" aria-label="select example" id="formfilter" @change="$emit('filter')">
+            <option selected value="null">
+                Filter by Card Archetype
+            </option>
+            <option option v-for=" archetype in archetypes" :value="archetype.archetype_name">
                 {{ archetype.archetype_name }}
             </option>
         </select>

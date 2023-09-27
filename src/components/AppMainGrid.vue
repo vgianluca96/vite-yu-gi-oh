@@ -1,4 +1,5 @@
 <script>
+
 import AppMainCard from './AppMainCard.vue'
 
 export default {
@@ -7,12 +8,13 @@ export default {
     components: {
         AppMainCard
     }
-
 }
+
 </script>
 
 <template>
     <div class="cards-container p-4">
+
         <div class="text-bg-dark p-3 fw-bold">
             Found 39 card
         </div>
@@ -32,6 +34,7 @@ export default {
             </svg>
             loading
         </div>
+
     </div>
 </template>
 

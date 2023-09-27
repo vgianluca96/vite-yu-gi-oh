@@ -3,8 +3,8 @@
 export default {
     name: 'AppMainCard',
     props: ['card']
-
 }
+
 </script>
 
 <template>
