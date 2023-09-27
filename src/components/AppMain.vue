@@ -16,12 +16,12 @@ export default {
         }
     },
     mounted() {
-        this.state.getArch();
-        this.state.getCard();
+        this.state.getArchetypes();
+        this.state.getCards();
     },
     methods: {
         filter() {
-            this.state.getCard();
+            this.state.getCards();
         }
     }
 }
