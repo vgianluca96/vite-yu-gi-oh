@@ -10,7 +10,7 @@ export default {
 <template>
     <div class="d-flex align-items-center pb-3">
         <div class="input-group">
-            <div class="input-group-text">
+            <div class="input-group-text text-bg-dark">
                 Filter by Archetype
             </div>
             <div>
@@ -26,8 +26,8 @@ export default {
         </div>
 
         <div class="input-group ms-2">
-            <div class="input-group-text">
-                Number of cards
+            <div class="input-group-text text-bg-dark">
+                Number of cards to show
             </div>
             <div>
                 <select class="form-select" aria-label="select example" id="numbFilter" @change="$emit('filter')">
