@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 import axios from 'axios'
 
 export const state = reactive({
-    url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=200&offset=0',
+    url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
     urlTemp: '',
     archetypes: null,
     cards: null,
@@ -15,6 +15,7 @@ export const state = reactive({
     },
     getCards() {
         this.urlTemp = this.url;
+        this.urlTemp += ['?num=' + numbFilter.value + '&offset=0'];
         if (archetypeFilter.value != 'null') {
             this.urlTemp += ['&archetype=' + archetypeFilter.value];
         }
