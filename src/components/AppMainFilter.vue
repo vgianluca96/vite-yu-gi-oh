@@ -8,8 +8,8 @@ export default {
 </script>
 
 <template>
-    <div class="d-flex align-items-center">
-        <div class="input-group pb-3">
+    <div class="d-flex align-items-center pb-3">
+        <div class="input-group">
             <div class="input-group-text">
                 Filter by Archetype
             </div>
@@ -25,7 +25,7 @@ export default {
             </div>
         </div>
 
-        <div class="input-group pb-3 ms-2">
+        <div class="input-group ms-2">
             <div class="input-group-text">
                 Number of cards
             </div>
